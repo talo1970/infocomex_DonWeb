@@ -11,8 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('cotizacions', function (Blueprint $table) {
+        Schema::create('cotizaciones', function (Blueprint $table) {
             $table->id();
+
+            $table->foreignId('moneda_id')->references('id')->on('monedas');
+            $table->date('fecha');
+            $table->decimal('cotizacion', 15, 2);
+
             $table->timestamps();
         });
     }
@@ -22,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('cotizacions');
+        Schema::dropIfExists('cotizaciones');
     }
 };

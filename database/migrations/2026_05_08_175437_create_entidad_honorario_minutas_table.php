@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('entidad_honorario_minutas', function (Blueprint $table) {
             $table->id();
+
+            
             $table->timestamps();
         });
     }

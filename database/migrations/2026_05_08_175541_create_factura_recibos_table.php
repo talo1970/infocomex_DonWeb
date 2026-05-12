@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('factura_recibos', function (Blueprint $table) {
             $table->id();
+
+            $table->foreignId('factura_id')->references('id')->on('facturas');
+            $table->foreignId('recibo_id')->references('id')->on('recibos');
+
             $table->timestamps();
         });
     }

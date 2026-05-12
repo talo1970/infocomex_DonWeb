@@ -11,8 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tipos_entidads', function (Blueprint $table) {
+        Schema::create('tipos_entidades', function (Blueprint $table) {
             $table->id();
+
+            $table->string('nombre');
+            $table->string('letra');
+
             $table->timestamps();
         });
     }
@@ -22,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('tipos_entidads');
+        Schema::dropIfExists('tipos_entidades');
     }
 };

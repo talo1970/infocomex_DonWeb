@@ -11,9 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tipos_referencias', function (Blueprint $table) {
+        Schema::create('referencias', function (Blueprint $table) {
             $table->id();
+
+            $table->string('nombre');
+            $table->boolean('seleccion')->default(false);
+            
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
@@ -22,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('tipos_referencias');
+        Schema::dropIfExists('referencias');
     }
 };

@@ -13,7 +13,18 @@ return new class extends Migration
     {
         Schema::create('productos', function (Blueprint $table) {
             $table->id();
+            
+            $table->string('nombre');
+            $table->string('letra');
+            $table->boolean('honorario')->nullable()->default(false);
+            $table->string('abraviado')->nullable();
+            $table->string('color')->nullable();
+            $table->string('color_web')->nullable();
+            $table->string('tabla')->nullable();
+            
             $table->timestamps();
+            $table->softDeletes();
+            
         });
     }
 

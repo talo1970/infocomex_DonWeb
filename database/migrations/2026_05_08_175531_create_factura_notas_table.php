@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('factura_notas', function (Blueprint $table) {
             $table->id();
+
+            $table->foreignId('factura_id')->references('id')->on('facturas');
+            $table->foreignId('nota_id')->references('id')->on('notas');
+            
             $table->timestamps();
         });
     }

@@ -4,9 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Estado extends Model
+class Referencia extends Model
 {
-    protected $table = 'estados';
+    protected $table = 'referencias';
 
     protected $fillable = [
         // Agrega aquí los campos que deseas permitir asignar masivamente

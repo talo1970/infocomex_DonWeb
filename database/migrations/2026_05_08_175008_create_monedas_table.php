@@ -13,7 +13,14 @@ return new class extends Migration
     {
         Schema::create('monedas', function (Blueprint $table) {
             $table->id();
+
+            $table->string('nombre');
+            $table->string('simbolo');
+            $table->string('pais');
+
             $table->timestamps();
+            $table->softDeletes();
+            
         });
     }
 
