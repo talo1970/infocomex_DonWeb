@@ -22,7 +22,7 @@ return new class extends Migration
             $table->foreignId('entidad_id')->references('id')->on('entidades');
             $table->string('concepto')->nullable();
             $table->text('observacion')->nullable();
-            $table->decimal('efectivo', 10, 2);
+            $table->decimal('efectivo', 10, 2)->nullable();
             $table->decimal('porcentaje_impuesto', 10, 2)->nullable();
             $table->decimal('importe_impuesto', 10, 2)->nullable();
             $table->decimal('total', 10, 2)->nullable();

@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Referencia;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Support\Facades\Schema;
@@ -30,6 +31,10 @@ class DatabaseSeeder extends Seeder
             $this->call(ProvinciaSeeder::class);
             $this->call(ProductoSeeder::class);
             $this->call(MonedaSeeder::class);
+            $this->call(ValorSeeder::class);
+            $this->call(SucursalSeeder::class);
+            $this->call(ReferenciaSeeder::class);
+            $this->call(CotizacionSeeder::class);
 
          Schema::enableForeignKeyConstraints();
 
