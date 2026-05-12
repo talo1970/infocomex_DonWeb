@@ -44,7 +44,7 @@ return new class extends Migration
             $table->foreignId('vendedor_id')->references('id')->on('usuarios')->nullable();
 
             $table->timestamps();
-            $table->softDeletes()
+            $table->softDeletes();
 
         });
     }

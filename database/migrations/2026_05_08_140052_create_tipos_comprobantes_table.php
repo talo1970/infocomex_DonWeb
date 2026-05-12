@@ -15,6 +15,9 @@ return new class extends Migration
             $table->id();
 
             $table->string('nombre');
+            $table->string('tipo')->nullable();
+            $table->string('abreviado')->nullable();
+
             $table->timestamps();
             
         });

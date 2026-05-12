@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('nombre');
             $table->string('simbolo');
             $table->string('pais');
+            $table->boolean('seleccion')->default(false);
 
             $table->timestamps();
             $table->softDeletes();
