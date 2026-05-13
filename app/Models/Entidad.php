@@ -14,7 +14,29 @@ class Entidad extends Model
     protected $table = 'entidades';
 
     protected $fillable = [
-        // Agrega aquí los campos que deseas permitir asignar masivamente
+                'tipo_entidad_id',
+                'razon_social',
+                'cuit',
+                'porcentaje_comision',
+                'telefono',
+                'contacto',
+                'mail',
+                'dimicilio',
+                'numero',
+                'departamento_piso',
+                'codigo_postal',
+                'localidad',
+                'provincia_id',
+                'pais',
+                'modo_factura',
+                'codigo_proveedor',
+                'observacion',
+                'tipo_factura_id',
+                'comision_limite',
+                'comision_minima',
+                'comision_fija',
+                'tipo_operacion',
+                'vendedor_id'
     ];  
     
 

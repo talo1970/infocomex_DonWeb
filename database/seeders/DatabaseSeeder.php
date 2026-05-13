@@ -38,6 +38,10 @@ class DatabaseSeeder extends Seeder
             $this->call(CotizacionSeeder::class);
             $this->call(NotaSeeder::class);
             $this->call(TiposDocumentoSeeder::class);
+            $this->call(HonorarioProductoSeeder::class);
+
+
+            //$this->call(EntidadHonorarioProductoSeeder::class);
 
          Schema::enableForeignKeyConstraints();
 

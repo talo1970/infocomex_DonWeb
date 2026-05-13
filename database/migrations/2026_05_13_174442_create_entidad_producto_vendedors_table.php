@@ -11,8 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('honoracio_minutas', function (Blueprint $table) {
+        Schema::create('entidad_producto_vendedors', function (Blueprint $table) {
             $table->id();
+
+            $table->foreignId('entidad_id')->references('id')->on('entidades');
+            $table->foreignId('producto_id')->references('id')->on('productos');
+            $table->foreignId('vendedor_id')->references('id')->on('users');
+
             $table->timestamps();
         });
     }
@@ -22,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('honoracio_minutas');
+        Schema::dropIfExists('entidad_producto_vendedors');
     }
 };
