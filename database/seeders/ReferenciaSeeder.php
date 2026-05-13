@@ -13,6 +13,24 @@ class ReferenciaSeeder extends Seeder
      */
     public function run(): void
     {
+
+        //cotizaciones :: truncate (); 
+        $csvFile = fopen ( base_path ( 'database/data/referencia.csv' ), 'r' ); 
+        $firstline = true ; 
+        while (( $data = fgetcsv ( $csvFile , 2000 , ',' )) !== false ) { 
+            // var_dump($data);
+            if (! $firstline ) { 
+                Referencia :: create ([ 
+                    'id' => $data [ '0' ],
+                    'nombre' => $data [ '1' ],
+                    'seleccion' => 0
+                ]); 
+            } 
+            $firstline = false ; 
+        } 
+        fclose ( $csvFile );
+
+/*
         $referencias = [
                         ['nombre' => 'COD 628 Pago de Regalías', 'seleccion' => '0'],
                         ['nombre' => 'COD 101 Expo - Orden de Pago', 'seleccion' => '0'],
@@ -205,5 +223,6 @@ class ReferenciaSeeder extends Seeder
                                     'seleccion' => $referencia['seleccion']
                 ]);
         }
+                */
     }
 }

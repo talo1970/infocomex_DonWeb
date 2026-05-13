@@ -29,6 +29,7 @@ return new class extends Migration
             $table->string('pais', 100)->nullable();
 
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

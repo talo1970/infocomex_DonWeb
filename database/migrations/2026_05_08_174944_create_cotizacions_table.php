@@ -19,6 +19,7 @@ return new class extends Migration
             $table->decimal('cotizacion', 15, 2);
 
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

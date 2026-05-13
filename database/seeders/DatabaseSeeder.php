@@ -26,6 +26,7 @@ class DatabaseSeeder extends Seeder
          Schema::disableForeignKeyConstraints();
                 
             $this->call(ClaseSeeder::class);
+            $this->call(CodigoVentaSeeder::class);
             $this->call(TiposComprobanteSeeder::class);
             $this->call(TiposEntidadSeeder::class);
             $this->call(ProvinciaSeeder::class);
@@ -35,6 +36,8 @@ class DatabaseSeeder extends Seeder
             $this->call(SucursalSeeder::class);
             $this->call(ReferenciaSeeder::class);
             $this->call(CotizacionSeeder::class);
+            $this->call(NotaSeeder::class);
+            $this->call(TiposDocumentoSeeder::class);
 
          Schema::enableForeignKeyConstraints();
 

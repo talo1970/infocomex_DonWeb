@@ -3,13 +3,18 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Cotizacion extends Model
 {
-     protected $table = 'cotizaciones';
+    use SoftDeletes;
+    
+    protected $table = 'cotizaciones';
 
     protected $fillable = [
-        // Agrega aquí los campos que deseas permitir asignar masivamente
+           'moneda_id',
+           'fecha',
+           'cotizacion'
     ];  
 
 }

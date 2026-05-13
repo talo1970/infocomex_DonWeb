@@ -3,12 +3,16 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Valor extends Model
 {
+    use SoftDeletes;
+    
     protected $table = 'valores';
 
     protected $fillable = [
-        // Agrega aquí los campos que deseas permitir asignar masivamente
+            'nombre',
+            'seleccion'
     ];  
 }
