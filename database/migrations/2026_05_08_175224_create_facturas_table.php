@@ -32,7 +32,7 @@ return new class extends Migration
             $table->decimal('importe_impuesto', 10, 2)->nullable();
             $table->decimal('total', 10, 2)->nullable();
             $table->text('detalle')->nullable();
-            $table->decimal('saldoo_anterior', 10, 2)->default(0);
+            $table->decimal('saldo_anterior', 10, 2)->default(0);
             // ver de precuntar a Oscar
             //$table->decimal('DetAtraso', 10, 2);
             //$table->decimal('ImpAtraso', 10, 2);

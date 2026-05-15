@@ -16,7 +16,7 @@ return new class extends Migration
             $table->uuid('id')->primary();
 
             $table->foreignId('tipo_entidad_id')->references('id')->on('tipos_entidades');
-            $table->string('razon_social', 100)->unique();
+            $table->string('razon_social', 100);// ->unique();
             $table->unsignedBigInteger('cuit')->nullable();
             $table->decimal('porcentaje_comision', 10, 2)->nullable();
             $table->string('telefono', 50)->nullable();

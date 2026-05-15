@@ -40,6 +40,7 @@ class DatabaseSeeder extends Seeder
             $this->call(TiposDocumentoSeeder::class);
             $this->call(HonorarioProductoSeeder::class);
 
+            $this->call(EntidadSeeder::class);
 
             //$this->call(EntidadHonorarioProductoSeeder::class);
 
