@@ -41,8 +41,10 @@ class DatabaseSeeder extends Seeder
             $this->call(HonorarioProductoSeeder::class);
 
             $this->call(EntidadSeeder::class);
-
-            //$this->call(EntidadHonorarioProductoSeeder::class);
+            $this->call(ContactoSeeder::class);
+            $this->call(EstadoSeeder::class);
+            $this->call(FacturaMinutaSeeder::class);
+            $this->call(EntidadHonorarioProductoSeeder::class);
 
          Schema::enableForeignKeyConstraints();
 

@@ -28,7 +28,7 @@ class EntidadSeeder extends Seeder
                     'telefono' => $data [ '5' ],
                     'contacto' => $data [ '6' ],
                     'mail' => $data [ '7' ],
-                    'dimicilio' => $data [ '8' ],
+                    'domicilio' => $data [ '8' ],
                     'numero' => $data [ '9' ],
                     'departamento_piso' => $data [ '10' ],
                     'codigo_postal' => $data [ '11' ],

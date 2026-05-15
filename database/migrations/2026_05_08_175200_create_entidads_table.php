@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('telefono', 50)->nullable();
             $table->string('contacto', 100)->nullable();
             $table->string('mail', 50)->nullable();
-            $table->string('dimicilio', 100)->nullable();
+            $table->string('domicilio', 200)->nullable();
             $table->string('numero', 50)->nullable();
             $table->string('departamento_piso', 50)->nullable();
             $table->string('codigo_postal', 50)->nullable();

@@ -14,10 +14,11 @@ return new class extends Migration
         Schema::create('estados', function (Blueprint $table) {
             $table->id();
             $table->string('nombre');
-            
             //ver
-            //$table->string('producto_id')->nullable();
-
+            $table->string('producto_id')->nullable();
+            $table->string('cual')->nullable();
+            $table->string('tipo_usuario')->nullable();
+            
             $table->timestamps();
             $table->softDeletes();
 

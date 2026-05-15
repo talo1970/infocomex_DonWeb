@@ -15,10 +15,8 @@ return new class extends Migration
             $table->id();
 
             $table->foreignId('entidad_id')->references('id')->on('entidades');
-
-            $table->string('nombre', 100);
-            $table->string('apellido', 100);
-            $table->string('e-mail', 200)->nullable();
+            $table->string('contacto', 100);
+            $table->string('mail', 200)->nullable();
             $table->string('telefono', 50)->nullable();
             $table->string('domicilio', 100)->nullable();
             $table->string('numero', 20)->nullable();

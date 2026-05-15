@@ -12,6 +12,9 @@ class Estado extends Model
     protected $table = 'estados';
 
     protected $fillable = [
-        'nombre'
+        'nombre',
+        'producto_id',
+        'cual',
+        'tipo_usuario'
     ];  
 }
